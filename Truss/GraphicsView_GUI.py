@@ -1,11 +1,4 @@
-# -*- coding: utf-8 -*-
-
-# Form implementation generated from reading ui file 'GraphicsView_GUI.ui'
-#
-# Created by: PyQt5 UI code generator 5.9.2
-#
-# WARNING! All changes made in this file will be lost!
-
+## -*- coding: utf-8 -*-
 from PyQt5 import QtCore, QtGui, QtWidgets
 
 class Ui_Form(object):
@@ -38,4 +31,3 @@ class Ui_Form(object):
         _translate = QtCore.QCoreApplication.translate
         Form.setWindowTitle(_translate("Form", "Form"))
         self.pushButton.setText(_translate("Form", "PushButton"))
-

@@ -1,0 +1,27 @@
+# Example TRUSS - Updated for Bridge-like Structure with 3 Triangles
+# Two pins on the floor, forming a Warren truss
+
+Title, 'Warren Truss Bridge Example'
+
+#         Sut(ksi) Sy(ksi) E(Mpsi)
+Material,   105,    82,      30
+
+Static_factor,  3.5
+
+# Nodes - locations for link-joints and applied loads
+#      name   x     y
+node,  Left,   0,     0
+node,  B,      60,    60
+node,  C,      120,   0
+node,  D,      180,   60
+node,  Right,  240,   0
+
+# Links - structural members connecting two nodes
+#      name    Node-1   Node-2   width   thickness   material
+link,  1,     Left,    C,       2.0,    0.5,        Steel    # Bottom chord
+link,  2,     C,       Right,   2.0,    0.5,        Steel    # Bottom chord
+link,  3,     B,       D,       2.0,    0.5,        Steel    # Top chord
+link,  4,     Left,    B,       1.5,    0.4,        Aluminum # Diagonal
+link,  5,     B,       C,       1.5,    0.4,        Aluminum # Diagonal
+link,  6,     C,       D,       1.5,    0.4,        Aluminum # Diagonal
+link,  7,     D,       Right,   1.5,    0.4,        Aluminum # Diagonal
